@@ -6,6 +6,11 @@ import Logo from "./navbar/logo";
 import SearchBar from "./navbar/search-bar";
 import Results from "./navbar/results";
 
+import MovieList from "./popcorn-lists/movie-box/movie-list";
+import Summary from "./popcorn-lists/watched-movie-box/summary";
+import WatchedMovieList from "./popcorn-lists/watched-movie-box/watched-movie-list";
+import GeneralMovieBox from "./popcorn-lists/general-movie-box";
+
 const PopcornPage = () => {
   const [movies, setMovies] = useState(tempMovieData);
   const [watchedMovies, setWatchedMovies] = useState(tempWatchedData);
@@ -16,7 +21,15 @@ const PopcornPage = () => {
         <SearchBar />
         <Results movies={movies} />
       </Navbar>
-      <PopcornMain movies={movies} watchedMovies={watchedMovies} />;
+      <PopcornMain>
+        <GeneralMovieBox>
+          <MovieList movies={movies} />
+        </GeneralMovieBox>
+        <GeneralMovieBox>
+          <Summary watchedMovies={watchedMovies} />
+          <WatchedMovieList watchedMovies={watchedMovies} />
+        </GeneralMovieBox>
+      </PopcornMain>
     </>
   );
 };
