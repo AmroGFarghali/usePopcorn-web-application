@@ -1,0 +1,29 @@
+.star-container {
+  display: flex;
+  padding: 1.5rem;
+  gap: 0.5rem;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  svg {
+    width: 30px;
+  }
+
+  cursor: pointer;
+}
+
+.movie-rating {
+  font-size: 2rem;
+
+  p {
+    color: orange;
+  }
+}
+
+svg {
+  /* fill: orange; */
+}
