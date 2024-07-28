@@ -1,11 +1,15 @@
 import WatchedMovie from "./watched-movie";
 
-const WatchedMovieList = ({ watchedMovies }) => {
+const WatchedMovieList = ({ watchedMovies, setWatchedMovies }) => {
   return (
     <>
       <ul className="list">
         {watchedMovies?.map((movie) => (
-          <WatchedMovie movie={movie} />
+          <WatchedMovie
+            setWatchedMovies={setWatchedMovies}
+            key={movie.imdbId}
+            movie={movie}
+          />
         ))}
       </ul>
     </>

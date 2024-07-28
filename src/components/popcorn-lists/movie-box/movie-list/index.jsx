@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Movie from "./movie";
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, setSelectedMovie }) => {
   return (
-    <ul className="list">
+    <ul className="list list-movies">
       {movies?.map((movie) => (
-        <Movie movie={movie} />
+        <Movie setSelectedMovie={setSelectedMovie} movie={movie} />
       ))}
     </ul>
   );
