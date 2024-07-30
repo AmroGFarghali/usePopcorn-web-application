@@ -36,7 +36,7 @@ const MovieDetails = ({
   const fetchMovie = async () => {
     setIsLoading(true);
     const request = await fetch(
-      `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedMovie}`
+      `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedMovie}`
     );
 
     const data = await request.json();
